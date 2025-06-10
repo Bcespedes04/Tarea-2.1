@@ -1,0 +1,60 @@
+﻿
+@model Tarea_2.Models.Triangulo
+
+@{
+    ViewBag.Title = "Tarea 2";
+}
+
+<h2>Tarea 2 Programación Avanzada</h2>
+
+@using (Html.BeginForm())
+{
+    <label for="a">a:</label>
+    @Html.TextBoxFor(m => m.a)
+    @Html.ValidationMessageFor(m => m.a)
+
+    <br />
+    <label for="b">b:</label>
+    @Html.TextBoxFor(m => m.b)
+    @Html.ValidationMessageFor(m => m.b)
+
+    <br />
+    <label for="c">c:</label>
+    @Html.TextBoxFor(m => m.c)
+    @Html.ValidationMessageFor(m => m.c)
+
+    <br />
+    <br />
+
+    <input type="submit" value="Calcular" />
+}
+
+@if (Model.Area > 0)
+{
+    <h3>Resultados</h3>
+    <p>Perímetro: @Model.Perimetro u</p>
+    <p>Semiperímetro: @Model.Semiperimetro u</p>
+    <p>Área: @Model.Area u²</p>
+    <p>Tipo de triángulo: @Model.Tipo</p>
+    <p>Ángulo α: @Model.AnguloAlpha º</p>
+    <p>Ángulo β: @Model.AnguloBeta º</p>
+    <p>Ángulo ɣ: @Model.AnguloGamma º</p>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+

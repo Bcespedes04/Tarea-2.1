@@ -1,0 +1,16 @@
+﻿# Ignora configuraciones locales de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Ignora carpetas de compilación
+bin/
+obj/
+
+# Ignora archivos temporales y bases de datos locales
+*.dbmdl
+*.log
+*.cache
+
+# Ignora paquetes
+packages/
