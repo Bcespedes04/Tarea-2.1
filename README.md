@@ -23,7 +23,9 @@ Prompst o preguntas a Inteligencia Artificial
 
 
 
-2) ![image](https://github.com/user-attachments/assets/83172bf2-4358-432f-835b-3ee4d8d45e8a) para preguntarle como podia poner a: b: y demas la respeusta fue
+2) ![image](https://github.com/user-attachments/assets/83172bf2-4358-432f-835b-3ee4d8d45e8a) 
+
+para preguntarle como podia poner a: b: y demas la respeusta fue
 
 En tu Index.cshtml, reemplazá este bloque:
 
